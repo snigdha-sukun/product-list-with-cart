@@ -1,61 +1,26 @@
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
+import { theme } from "./utils/theme";
+import { GlobalStyles } from "./utils/globalStyles";
+import { Container } from "./App.styled";
+import ProductList from "./components/ProductList/ProductList";
+import Cart from "./components/Cart/Cart";
+import { CartProvider } from "./providers/CartProvider";
+import OrderDialog from "./components/OrderDialog/OrderDialog";
 
 function App() {
 
-  return (
-    <ThemeProvider theme={theme}>
-      Desserts
-
-  Waffle with Berries
-  Waffle
-  6.50
-  Add to Cart
-
-  Vanilla Bean Crème Brûlée
-  Crème Brûlée
-  7.00
-  Add to Cart
-
-  Macaron Mix of Five
-  Macaron
-  8.00
-  Add to Cart
-
-  Classic Tiramisu
-  Tiramisu
-  5.50
-  Add to Cart
-
-  Pistachio Baklava
-  Baklava
-  4.00
-  Add to Cart
-
-  Lemon Meringue Pie
-  Pie
-  5.00
-  Add to Cart
-
-  Red Velvet Cake
-  Cake
-  4.50
-  Add to Cart
-
-  Salted Caramel Brownie
-  Brownie
-  4.50
-  Add to Cart
-
-  Vanilla Panna Cotta
-  Panna Cotta
-  6.50
-  Add to Cart
-
-  Your Cart
-  Your added items will appear here
-    </ThemeProvider>
-  )
+	return (
+		<ThemeProvider theme={theme}>
+			<CartProvider>
+				<GlobalStyles />
+				<Container>
+					<ProductList />
+					<Cart />
+				</Container>
+				<OrderDialog />
+			</CartProvider>
+		</ThemeProvider>
+	);
 }
 
-export default App
+export default App;

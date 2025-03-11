@@ -5,5 +5,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-size: ${({ theme }) => theme.fontSizes.base};
     font-weight: ${({ theme }) => theme.fontWeights.base};
+    background-color: ${({ theme }) => theme.colors.rose100};
   }
 `;

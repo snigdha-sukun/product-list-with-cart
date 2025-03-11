@@ -11,6 +11,7 @@ declare module "styled-components" {
 			rose400: string;
 			rose500: string;
 			rose900: string;
+			darkRed: string;
 		};
 		fontSizes: {
 			base: string;

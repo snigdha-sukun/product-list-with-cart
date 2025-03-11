@@ -8,6 +8,7 @@ export const theme = {
 		rose400: "hsl(7, 20%, 60%)",
 		rose500: "hsl(12, 20%, 44%)",
 		rose900: "hsl(14, 65%, 9%)",
+		darkRed: "hsl(0, 86%, 35%)",
 	},
 	fontSizes: {
 		base: "16px",

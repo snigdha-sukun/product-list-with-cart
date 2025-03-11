@@ -8,7 +8,4 @@
 
 body {
     font-family: 'Red Hat Text', sans-serif;
-    place-items: center;
-    display: grid;
-    height: 100vh;
 }
