@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { mobile } from "../../utils/mixins";
 
 const fadeIn = keyframes`
   from {
@@ -13,7 +14,7 @@ export const Modal = styled.div<{ isOpen: boolean }>`
     display: ${({ isOpen }) => (isOpen ? "block" : "none")};
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 10rem;
     left: 0;
     top: 0;
     width: 100%;
@@ -22,6 +23,10 @@ export const Modal = styled.div<{ isOpen: boolean }>`
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     animation: ${fadeIn} 0.3s ease-in-out;
+
+    ${mobile`
+      padding-top: 25rem;
+    `}
 `;
 
 export const ModalContent = styled.div`
@@ -30,6 +35,15 @@ export const ModalContent = styled.div`
     padding: 2rem;
     width: fit-content;
     border-radius: 1rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    ${mobile`
+      width: 100%;
+      margin: 0;
+      border-radius: 1rem 1rem 0 0;
+    `}
 `;
 
 export const OrderDetails = styled.div`
